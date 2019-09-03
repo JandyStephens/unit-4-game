@@ -7,3 +7,13 @@ padding: 10px;
 background-color: aqua;
 padding: 10px;
 }
+
+.randomNumBox {
+    background-color: rgb(230, 170, 59);
+    padding: 10px;
+}
+
+/* .gemButtons {
+    height: 300px;
+    width: 300px;
+} */

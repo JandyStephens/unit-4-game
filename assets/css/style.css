@@ -10,11 +10,12 @@ padding: 10px;
 
 .randomNumBox {
     background-color: rgb(230, 170, 59);
-    padding: 10px;
+    padding: 5px;
 }
 
 .jumbotron {
     margin: 0;
+    padding: 25px;
 }
 
 .totalScoreBox, .winLossBox, .randomNumBox {

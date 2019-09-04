@@ -60,6 +60,7 @@ $(document).ready(function () {
         gemData.purple.value = getNum(1, 12);
         // Add target value (randomly generated #) to page
         $("#randomNum").text(randomlyGeneratedNumber);
+        currentScore=0;
 
     }
 
@@ -74,7 +75,6 @@ $(document).ready(function () {
             wins++;
             // Record win
             $("#wins").text(wins);
-            // TODO: reset current #
             startGame();
         }
 
@@ -84,7 +84,6 @@ $(document).ready(function () {
             loss++;
             // Record loss
             $("#losses").text(loss);
-            // TODO: reset current #
             startGame();
         }
 

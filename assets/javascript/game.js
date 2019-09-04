@@ -66,6 +66,7 @@
             var addValues = function(gemValue) {
                 // Create some logic to add score
                 currentScore += gemValue;
+                $("#numTotal").text(currentScore);
                 // Create some logic to evaluate score
                     // If logic shows score is equal, they win and start game.
                     if (currentScore === randomlyGeneratedNumber) {
@@ -83,19 +84,22 @@
             }
 
             $("#redGem").on("click", function() {
-                addValues(gemData.red.value)
+                addValues(gemData.red.value);
                 console.log("You clicked a crystal, mofo!");
               });
 
               $("#greenGem").on("click", function() {
+                addValues(gemData.green.value);
                 console.log("Woot!");
               });
 
               $("#blueGem").on("click", function() {
+                addValues(gemData.blue.value);
                 console.log("Finally!");
               });
 
               $("#purpleGem").on("click", function() {
+                addValues(gemData.purple.value);
                 console.log("Gott seid dank!");
               });
 

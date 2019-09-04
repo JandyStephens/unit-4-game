@@ -23,7 +23,14 @@ padding: 10px;
 }
 
 
-/* .gemButtons {
-    height: 300px;
-    width: 300px;
-} */
+#redGem {
+    height: 190px;
+    width: 203x;
+    padding: 10px;
+}
+
+#greenGem,#blueGem,#purpleGem {
+    height: 200px;
+    width: 200px;
+    padding: 5px;
+}

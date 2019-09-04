@@ -58,9 +58,14 @@ $(document).ready(function () {
         gemData.green.value = getNum(1, 12);
         gemData.blue.value = getNum(1, 12);
         gemData.purple.value = getNum(1, 12);
+
+        //cleans current random number for new game
+        randomlyGeneratedNumber = getNum(19, 120);
         // Add target value (randomly generated #) to page
         $("#randomNum").text(randomlyGeneratedNumber);
-        currentScore=0;
+        //clears current score for new game
+        currentScore = 0;
+        $("numTotal").text(currentScore);
 
     }
 

@@ -25,7 +25,7 @@ padding: 10px;
 
 #redGem {
     height: 175px;
-    width: 205x;
+    width: 195px;
     padding: 5px;
 }
 
@@ -33,4 +33,10 @@ padding: 10px;
     height: 200px;
     width: 200px;
     padding: 5px;
+}
+
+.gemButtons {
+  display: flex;
+  justify-content: center;
+    vertical-align: middle;
 }

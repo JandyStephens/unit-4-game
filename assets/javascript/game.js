@@ -25,8 +25,63 @@
                 // gemBtn.text(imgArray[i]);
                 // document.createElement("IMG");
             // }
+            var currentScore = 0;
+            var randomlyGeneratedNumber = getNum(19, 120);
+            var wins = 0;
+            var losses = 0;
+
+            // Declare a global variable that keeps track of gem values
+            var gemData = {
+                red: {
+                    value: 0
+                },
+                green: {
+                    value: 0
+                },
+                blue: {
+                    value: 0
+                },
+                purple: {
+                    value: 0
+                },
+            }
+
+                
+              function getNum(min, max) {
+                return Math.floor(Math.random() * (max - min + 1) + min);   
+           }
+
+        // Declare variable named startGame and assigne a function
+            var startGame = function() {
+                // Assign new random value  to each gem color
+                gemData.red.value  = getNum(1, 12);
+                gemData.green.value  = getNum(1, 12);
+                gemData.blue.value  = getNum(1, 12);
+                gemData.purple.value  = getNum(1, 12);
+                // Add target value (randomly generated #) to page
+            }
+
+            var addValues = function(gemValue) {
+                // Create some logic to add score
+                currentScore += gemValue;
+                // Create some logic to evaluate score
+                    // If logic shows score is equal, they win and start game.
+                    if (currentScore === randomlyGeneratedNumber) {
+                        alert('Hey you won!')
+                        wins++;
+
+                        $("#wins").text(wins)
+
+                        startGame();
+                    }
+                        // Record win
+                    // If logic shows score is above, they lose and start game.
+
+                        // Record loss
+            }
 
             $("#redGem").on("click", function() {
+                addValues(gemData.red.value)
                 console.log("You clicked a crystal, mofo!");
               });
 
@@ -42,10 +97,6 @@
                 console.log("Gott seid dank!");
               });
 
-            //   function getNum() {
-            //       return 
-                  var randoNum = Math.floor(Math.random()*100)+20;
-                  $("#randomNum").text(randoNum);
               
               
 //   $("button").click(function() { //when button clicked
@@ -55,5 +106,5 @@
 //   console.log(val); 
 //   $("#first-number").text(val);  //grabbing first div and displaying val 
 //   });
-
+              startGame();
         })
